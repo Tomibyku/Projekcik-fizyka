@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define _CRT_NO_SECURE_WARNINGS
+
+/*void MENU()
+{
+	printf("Opcje programu: \n");
+	printf("Oblicz przyspieszenie wpisujac 1 \n");
+	printf("Oblicz m1 wpisujac 2 \n");
+	printf("Oblicz m2 wpisujac 3 \n");
+}*/
+
+float t;///tarcie
+
+void TARCIE()
+{
+	char a;
+	printf("Czy chcesz uwzglednic tarcie? (Y/N)\n");
+	a=getchar();
+	switch (a)
+	{
+	case 'y':
+		printf("Wprowadz wspolczynnik tarcia:\n");
+		scanf("%f",&t);
+		break;
+	case 'n':
+		break;
+	}
+}
+
+int main()
+{
+	printf("Program liczy przyspieszenie ciala m1 nadane przez cialo o masie m2\n");
+	printf("m1 - masa ciala na stoliku\nm2 - masa obciaznika\nl - długosc stolika\n"); ///legenda
+	TARCIE();
+	printf("%f",t);
+	system("pause");
+	return 0;
+}

@@ -14,78 +14,78 @@ int main(){
 	case 'y':
 		printf("Wprowadz wspolczynnik tarcia:\n");
 		scanf("%f",&t);
-		printf("Wprowadz przyspieszenie grawitacyjne: \n");
+		printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
         scanf("%f",&g);
         while(g<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz przyspieszenie grawitacyjne: \n");
+            printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
             scanf("%f",&g);
         }
-        printf("Wprowadz mase ciala na stoliku: \n");
+        printf("Wprowadz mase ciala na stoliku [kg]: \n");
         scanf("%f",&m1);
         while(m1<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku: \n");
+            printf("Wprowadz mase ciala na stoliku [kg]: \n");
             scanf("%f",&m1);
         }
-        printf("Wprowadz mase obciaznika: \n");
+        printf("Wprowadz mase obciaznika [kg]: \n");
         scanf("%f",&m2);
         while(m2<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku: \n");
+            printf("Wprowadz mase ciala na stoliku [kg]: \n");
             scanf("%f",&m2);
         }
-        printf("Wprowadz dlugosc stolika: \n");
+        printf("Wprowadz dlugosc stolika [m]: \n");
         scanf("%f",&l);
         while(l<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz dlugosc stolika: \n");
+            printf("Wprowadz dlugosc stolika [m]: \n");
             scanf("%f",&l);
         }
         a=((g*m2)-t*(g*m1))/(m1+m2);
         tk=sqrt(2*l/a);
         vmax=a*tk;
 
-        printf("Przyspieszenie wynosi a = %f\n",a);
-        printf("Czas koncowy wynosi tk = %f\n",tk);
-        printf("Predkosc maksymalna wynosi vmax = %f\n",vmax);
+        printf("Przyspieszenie wynosi a  = %f m/s^2 \n",a);
+        printf("Czas koncowy wynosi tk = %f\ s \n",tk);
+        printf("Predkosc maksymalna wynosi vmax = %f m/s \n",vmax);
 		break;
 	case 'n':
-	    printf("Wprowadz przyspieszenie grawitacyjne: \n");
+	    printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
         scanf("%f",&g);
         while(g<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz przyspieszenie grawitacyjne: \n");
+            printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
             scanf("%f",&g);
         }
-        printf("Wprowadz mase ciala na stoliku: \n");
+        printf("Wprowadz mase ciala na stoliku [kg]: \n");
         scanf("%f",&m1);
         while(m1<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku: \n");
+            printf("Wprowadz mase ciala na stoliku [kg]: \n");
             scanf("%f",&m1);
         }
-        printf("Wprowadz mase obciaznika: \n");
+        printf("Wprowadz mase obciaznika [kg]: \n");
         scanf("%f",&m2);
         while(m2<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku: \n");
+            printf("Wprowadz mase ciala na stoliku [kg]: \n");
             scanf("%f",&m2);
         }
-        printf("Wprowadz dlugosc stolika: \n");
+        printf("Wprowadz dlugosc stolika [m]: \n");
         scanf("%f",&l);
         while(l<0){
             printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz dlugosc stolika: \n");
+            printf("Wprowadz dlugosc stolika [m]: \n");
             scanf("%f",&l);
         }
         a=(g*m2)/(m1+m2);
         tk=sqrt(2*l/a);
         vmax=a*tk;
 
-        printf("Przyspieszenie wynosi a = %f\n",a);
-        printf("Czas koncowy wynosi tk = %f\n",tk);
-        printf("Predkosc maksymalna wynosi vmax = %f\n",vmax);
+        printf("Przyspieszenie wynosi a = %f m/s^2 \n",a);
+        printf("Czas koncowy wynosi tk = %f s \n",tk);
+        printf("Predkosc maksymalna wynosi vmax = %f m/s \n",vmax);
 		break;
 	}
 	system("pause");

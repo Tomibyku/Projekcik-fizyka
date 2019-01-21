@@ -1,93 +1,108 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#define _CRT_NO_SECURE_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
-int main(){
+int main() {
 	printf("Program liczy przyspieszenie ciala m1 nadane przez cialo o masie m2\n");
-	printf("m1 - masa ciala na stoliku\nm2 - masa obciaznika\nl - dlugosc stolika\n"); ///legenda
+	printf("m1 - masa ciala na stoliku\nm2 - masa obciaznika\nl - dlugosc stolika\n"); //legenda
 	printf("Czy chcesz uwzglednic tarcie? (y/n)\n");
-	char A; ///char do switcha
-	float a,m1,m2,l,g,t,vmax,tk; ///zmienne
-	A=getchar();
-	switch (A){
+	char A; //char do switcha
+	float a, m1, m2, l, g, t, vmax, tk; //zmienne
+	A = getchar();
+	switch (A) {
 	case 'y':
 		printf("Wprowadz wspolczynnik tarcia:\n");
-		scanf("%f",&t);
+		scanf("%f", &t);
 		printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
-        scanf("%f",&g);
-        while(g<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
-            scanf("%f",&g);
-        }
-        printf("Wprowadz mase ciala na stoliku [kg]: \n");
-        scanf("%f",&m1);
-        while(m1<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku [kg]: \n");
-            scanf("%f",&m1);
-        }
-        printf("Wprowadz mase obciaznika [kg]: \n");
-        scanf("%f",&m2);
-        while(m2<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku [kg]: \n");
-            scanf("%f",&m2);
-        }
-        printf("Wprowadz dlugosc stolika [m]: \n");
-        scanf("%f",&l);
-        while(l<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz dlugosc stolika [m]: \n");
-            scanf("%f",&l);
-        }
-        a=((g*m2)-t*(g*m1))/(m1+m2);
-        tk=sqrt(2*l/a);
-        vmax=a*tk;
+		scanf("%f", &g);
+		while (g<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
+			scanf("%f", &g);
+		}
+		printf("Wprowadz mase ciala na stoliku [kg]: \n");
+		scanf("%f", &m1);
+		while (m1<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz mase ciala na stoliku [kg]: \n");
+			scanf("%f", &m1);
+		}
+		printf("Wprowadz mase obciaznika [kg]: \n");
+		scanf("%f", &m2);
+		while (m2<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz mase ciala na stoliku [kg]: \n");
+			scanf("%f", &m2);
+		}
+		printf("Wprowadz dlugosc stolika [m]: \n");
+		scanf("%f", &l);
+		while (l<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz dlugosc stolika [m]: \n");
+			scanf("%f", &l);
+		}
+		a = ((g*m2) - t*(g*m1)) / (m1 + m2);
+		tk = sqrt(2 * l / a);
+		vmax = a*tk;
 
-        printf("Przyspieszenie wynosi a  = %f m/s^2 \n",a);
-        printf("Czas koncowy wynosi tk = %f\ s \n",tk);
-        printf("Predkosc maksymalna wynosi vmax = %f m/s \n",vmax);
+		printf("Przyspieszenie wynosi a  = %f m/s^2 \n", a);
+		printf("Czas koncowy wynosi tk = %f\ s \n", tk);
+		printf("Predkosc maksymalna wynosi vmax = %f m/s \n", vmax);
 		break;
 	case 'n':
-	    printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
-        scanf("%f",&g);
-        while(g<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
-            scanf("%f",&g);
-        }
-        printf("Wprowadz mase ciala na stoliku [kg]: \n");
-        scanf("%f",&m1);
-        while(m1<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku [kg]: \n");
-            scanf("%f",&m1);
-        }
-        printf("Wprowadz mase obciaznika [kg]: \n");
-        scanf("%f",&m2);
-        while(m2<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz mase ciala na stoliku [kg]: \n");
-            scanf("%f",&m2);
-        }
-        printf("Wprowadz dlugosc stolika [m]: \n");
-        scanf("%f",&l);
-        while(l<0){
-            printf("Wprowadz wartosc wieksza lub rowna 0\n");
-            printf("Wprowadz dlugosc stolika [m]: \n");
-            scanf("%f",&l);
-        }
-        a=(g*m2)/(m1+m2);
-        tk=sqrt(2*l/a);
-        vmax=a*tk;
+		printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
+		scanf("%f", &g);
+		while (g<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz przyspieszenie grawitacyjne [m/s^2]: \n");
+			scanf("%f", &g);
+		}
+		printf("Wprowadz mase ciala na stoliku [kg]: \n");
+		scanf("%f", &m1);
+		while (m1<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz mase ciala na stoliku [kg]: \n");
+			scanf("%f", &m1);
+		}
+		printf("Wprowadz mase obciaznika [kg]: \n");
+		scanf("%f", &m2);
+		while (m2<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz mase ciala na stoliku [kg]: \n");
+			scanf("%f", &m2);
+		}
+		printf("Wprowadz dlugosc stolika [m]: \n");
+		scanf("%f", &l);
+		while (l<0) {
+			printf("Wprowadz wartosc wieksza lub rowna 0\n");
+			printf("Wprowadz dlugosc stolika [m]: \n");
+			scanf("%f", &l);
+		}
+		a = (g*m2) / (m1 + m2);
+		tk = sqrt(2 * l / a);
+		vmax = a*tk;
 
-        printf("Przyspieszenie wynosi a = %f m/s^2 \n",a);
-        printf("Czas koncowy wynosi tk = %f s \n",tk);
-        printf("Predkosc maksymalna wynosi vmax = %f m/s \n",vmax);
+		printf("Przyspieszenie wynosi a = %f m/s^2 \n", a);
+		printf("Czas koncowy wynosi tk = %f s \n", tk);
+		printf("Predkosc maksymalna wynosi vmax = %f m/s \n", vmax);
 		break;
 	}
+	FILE * fp; //zapisywanie do pliku
+	fp = fopen("v(t).txt", "w");
+	float i;
+	fprintf(fp, "#t         v\n");
+	for (i = 0; i < tk; i = i + 0.01) {
+		fprintf(fp, "%f   %f\n",i,a*i);
+	}
+	fclose(fp);
+	FILE * fp2;
+	fp2 = fopen("s(t).txt", "w");
+	fprintf(fp2, "#t         s\n");
+	for (i = 0; i < tk; i = i + 0.01) {
+		fprintf(fp, "%f   %f\n", i, (i*i*a)/2);
+	}
+	fclose(fp2);
 	system("pause");
 	return 0;
 }
